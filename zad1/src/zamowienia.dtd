@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!ELEMENT zamowienia (nagłówek, zamówienie+)>
+
+<!ELEMENT nagłówek (przedmiot, opis, autorzy)>
+<!ELEMENT przedmiot (#PCDATA)>
+<!ELEMENT opis (#PCDATA)>
+
+<!ELEMENT autorzy (autor+)>
+<!ELEMENT autor (imię, nazwisko, album)>
+<!ELEMENT imię (#PCDATA)>
+<!ELEMENT nazwisko (#PCDATA)>
+<!ELEMENT album (#PCDATA)>
+
+<!ELEMENT zamówienie (towary, klient, data, koszt)>
+<!ATTLIST zamówienie 
+    dostawa (kurier | poczta) #REQUIRED
+    faktura (tak | nie) #REQUIRED>
+
+<!ELEMENT towary (towar+)>
+<!ELEMENT towar (nazwa, ilość, cena)>
+<!ELEMENT nazwa (#PCDATA)>
+<!ELEMENT ilość (#PCDATA)>
+<!ELEMENT cena (#PCDATA)>
+
+<!ELEMENT klient (imie, nazwisko, adres, email, telefon, nip?)>
+<!ELEMENT imie (#PCDATA)>
+<!ELEMENT adres (miasto, ulica?, nr_domu, nr_lokalu?, kod)>
+<!ELEMENT kod (#PCDATA)>
+<!ELEMENT miasto (#PCDATA)>
+<!ELEMENT ulica (#PCDATA)>
+<!ELEMENT nr_domu (#PCDATA)>
+<!ELEMENT nr_lokalu (#PCDATA)>
+<!ELEMENT email (#PCDATA)>
+<!ELEMENT telefon (#PCDATA)>
+<!ELEMENT nip (#PCDATA)>
+
+<!ELEMENT data (dzień, miesiąc, rok)>
+<!ELEMENT dzień (#PCDATA)>
+<!ELEMENT miesiąc (#PCDATA)>
+<!ELEMENT rok (#PCDATA)>
+
+<!ELEMENT koszt (#PCDATA)>

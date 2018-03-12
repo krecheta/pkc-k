@@ -1,0 +1,28 @@
+Zamówienia
+	Nagłówek
+	Zamówienie
+		Towary
+			Towar
+				Nazwa
+				Ilość
+				Cena
+		Klient
+			Imie
+			Nazwisko
+			Adres
+				Kod pocztowy
+				Miasto
+				Ulica
+				Nr domu
+				Nr lokalu
+			Email
+			Nr tel
+			NIP
+		Data
+			Rok
+			Miesiąc
+			Dzień
+			Godzina
+			Minuta
+		Cena całkowita
+		Dostawa (kurier | poczta | odbiór osobisty) atrybut

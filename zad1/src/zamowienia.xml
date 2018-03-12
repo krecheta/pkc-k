@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE zamowienia SYSTEM "zamowienia.dtd">
+
+<zamowienia>
+    <nagłówek>
+        <przedmiot>Programowanie komunikacji człowiek-komputer</przedmiot>
+        <opis>Zad 1. Użycie CSS do formatowania XML plus definicja DTD </opis>
+        <autorzy>
+            <autor>
+                <imię>Kamil</imię>
+                <nazwisko>Recheta</nazwisko>
+                <album>205310</album>
+            </autor>
+            <autor>
+                <imię>Dominik</imię>
+                <nazwisko>Dominiak</nazwisko>
+                <album>204193</album>
+            </autor>
+        </autorzy>
+    </nagłówek>
+    
+    <zamówienie dostawa='kurier' faktura='tak'>
+        <towary>
+            <towar>
+                <nazwa>Samsung Galaxy s8</nazwa>
+                <ilość>1</ilość>
+                <cena>2999.99</cena>
+            </towar>
+        </towary>
+        <klient>
+            <imie>Jan</imie>
+            <nazwisko>Kowalski</nazwisko>
+            <adres>
+                <miasto>Piotrków Trybunalski</miasto>
+                <ulica>Wronia</ulica>
+                <nr_domu>50</nr_domu>
+                <nr_lokalu>3</nr_lokalu>
+                <kod>97-300</kod>
+            </adres>
+            <email>jan.kowalski@gmail.com</email>
+            <telefon>614234767</telefon>
+            <nip>725-18-01-126</nip>
+        </klient>
+        <data>
+            <dzień>10</dzień>
+            <miesiąc>3</miesiąc>
+            <rok>2018</rok>
+        </data>
+        <koszt>2999.99</koszt>   
+    </zamówienie>
+    
+    <zamówienie dostawa='poczta' faktura='nie'>
+        <towary>
+            <towar>
+                <nazwa>Myszka SteelSeries Rival 310</nazwa>
+                <ilość>1</ilość>
+                <cena>239.00</cena>
+            </towar>
+            <towar>
+                <nazwa>Klawiatura Volcano RGB</nazwa>
+                <ilość>1</ilość>
+                <cena>249.99</cena>
+            </towar>
+        </towary>
+        <klient>
+            <imie>Jacek</imie>
+            <nazwisko>Nowak</nazwisko>
+            <adres>
+                <miasto>Łódź</miasto>
+                <ulica>Piotrkowska</ulica>
+                <nr_domu>15</nr_domu>
+                <nr_lokalu>1</nr_lokalu>
+                <kod>91-800</kod>
+            </adres>
+            <email>jacek111@gmail.com</email>
+            <telefon>723925647</telefon>
+        </klient>
+        <data>
+            <dzień>11</dzień>
+            <miesiąc>2</miesiąc>
+            <rok>2018</rok>
+        </data>
+        <koszt>488.99</koszt>   
+    </zamówienie>
+    
+    <zamówienie dostawa='poczta' faktura='nie'>
+        <towary>
+            <towar>
+                <nazwa>Powerbank Xiaomi 1200 mAh</nazwa>
+                <ilość>2</ilość>
+                <cena>59.99</cena>
+            </towar>
+            <towar>
+                <nazwa>Ładowarka USB-C</nazwa>
+                <ilość>1</ilość>
+                <cena>29.99</cena>
+            </towar>
+        </towary>
+        <klient>
+            <imie>Mateusz</imie>
+            <nazwisko>Góralski</nazwisko>
+            <adres>
+                <miasto>Warszawa</miasto>
+                <ulica>Łazienkowska</ulica>
+                <nr_domu>15</nr_domu>
+                <kod>00-008</kod>
+            </adres>
+            <email>mati.g81@onet.pl</email>
+            <telefon>714276554</telefon>
+        </klient>
+        <data>
+            <dzień>14</dzień>
+            <miesiąc>2</miesiąc>
+            <rok>2018</rok>
+        </data>
+        <koszt>149.97</koszt>   
+    </zamówienie>
+    
+    <zamówienie dostawa='kurier' faktura='tak'>
+        <towary>
+            <towar>
+                <nazwa>Procesor Intel i5-7400</nazwa>
+                <ilość>1</ilość>
+                <cena>689.00</cena>
+            </towar>
+            <towar>
+                <nazwa>Karta graficzna GeForce GTX 1050</nazwa>
+                <ilość>1</ilość>
+                <cena>899.00</cena>
+            </towar>
+            <towar>
+                <nazwa>Płyta główna MSI Z370-A</nazwa>
+                <ilość>1</ilość>
+                <cena>479.00</cena>
+            </towar>
+            <towar>
+                <nazwa>Dysk twardy ADATA SSD 256GB</nazwa>
+                <ilość>1</ilość>
+                <cena>315.00</cena>
+            </towar>
+            <towar>
+                <nazwa>Pamięć RAM HyperX 8GB</nazwa>
+                <ilość>2</ilość>
+                <cena>349.00</cena>
+            </towar>
+            <towar>
+                <nazwa>Obudowa Zalman Z1 NEO</nazwa>
+                <ilość>1</ilość>
+                <cena>129.00</cena>
+            </towar>
+        </towary>
+        <klient>
+            <imie>Kamil</imie>
+            <nazwisko>Kamiński</nazwisko>
+            <adres>
+                <miasto>Łódź</miasto>
+                <ulica>Obrońców Westerplatte</ulica>
+                <nr_domu>15</nr_domu>
+                <nr_lokalu>3</nr_lokalu>
+                <kod>91-812</kod>
+            </adres>
+            <email>kamil.kaminski@onet.pl</email>
+            <telefon>515726499</telefon>
+            <nip>712-11-51-187</nip>
+        </klient>
+        <data>
+            <dzień>11</dzień>
+            <miesiąc>3</miesiąc>
+            <rok>2018</rok>
+        </data>
+        <koszt>3209.00</koszt>   
+    </zamówienie>
+    
+    <zamówienie dostawa='kurier' faktura='nie'>
+        <towary>
+            <towar>
+                <nazwa>Konsola XBOX ONE S</nazwa>
+                <ilość>1</ilość>
+                <cena>1499.99</cena>
+            </towar>
+        </towary>
+        <klient>
+            <imie>Mateusz</imie>
+            <nazwisko>Krawczyk</nazwisko>
+            <adres>
+                <miasto>Moszczenica</miasto>
+                <ulica>Akacjowa</ulica>
+                <nr_domu>5</nr_domu>
+                <kod>97-310</kod>
+            </adres>
+            <email>krawczykmateusz@gmail.com</email>
+            <telefon>616847627</telefon>
+        </klient>
+        <data>
+            <dzień>11</dzień>
+            <miesiąc>3</miesiąc>
+            <rok>2018</rok>
+        </data>
+        <koszt>1499.99</koszt>   
+    </zamówienie>
+    
+    <zamówienie dostawa='poczta' faktura='nie'>
+        <towary>
+            <towar>
+                <nazwa>Laptop Apple MacBook Air</nazwa>
+                <ilość>1</ilość>
+                <cena>3749.00</cena>
+            </towar>
+        </towary>
+        <klient>
+            <imie>Paweł</imie>
+            <nazwisko>Kowalczyk</nazwisko>
+            <adres>
+                <miasto>Pabianice</miasto>
+                <ulica>Pułaskiego</ulica>
+                <nr_domu>8</nr_domu>
+                <kod>95-200</kod>
+            </adres>
+            <email>pablo3321@wp.pl</email>
+            <telefon>603286536</telefon>
+        </klient>
+        <data>
+            <dzień>3</dzień>
+            <miesiąc>3</miesiąc>
+            <rok>2018</rok>
+        </data>
+        <koszt>3749.00</koszt>   
+    </zamówienie>
+    
+    <zamówienie dostawa='kurier' faktura='nie'>
+        <towary>
+            <towar>
+                <nazwa>Czytnik Amazon Kindle Touch 8</nazwa>
+                <ilość>1</ilość>
+                <cena>299.99</cena>
+            </towar>
+            <towar>
+                <nazwa>Tablet Lenovo TAB 4</nazwa>
+                <ilość>1</ilość>
+                <cena>629.99</cena>
+            </towar>
+        </towary>
+        <klient>
+            <imie>Łukasz</imie>
+            <nazwisko>Błaszczyk</nazwisko>
+            <adres>
+                <miasto>Polesie</miasto>
+                <nr_domu>3</nr_domu>
+                <kod>97-320</kod>
+            </adres>
+            <email>lukasz8514@gmail.com</email>
+            <telefon>613926255</telefon>
+        </klient>
+        <data>
+            <dzień>13</dzień>
+            <miesiąc>3</miesiąc>
+            <rok>2018</rok>
+        </data>
+        <koszt>929.98</koszt>   
+    </zamówienie>
+    
+    <zamówienie dostawa='kurier' faktura='tak'>
+        <towary>
+            <towar>
+                <nazwa>Przewód USB-HDMI</nazwa>
+                <ilość>5</ilość>
+                <cena>19.99</cena>
+            </towar>
+        </towary>
+        <klient>
+            <imie>Jan</imie>
+            <nazwisko>Nowak</nazwisko>
+            <adres>
+                <miasto>Łódź</miasto>
+                <ulica>Tokarzewskiego</ulica>
+                <nr_domu>55</nr_domu>
+                <kod>91-812</kod>
+            </adres>
+            <email>janek.kowal@yahoo.com</email>
+            <telefon>703655174</telefon>
+            <nip>615-12-36-97</nip>
+        </klient>
+        <data>
+            <dzień>10</dzień>
+            <miesiąc>3</miesiąc>
+            <rok>2018</rok>
+        </data>
+        <koszt>99.95</koszt>   
+    </zamówienie>
+    
+    <zamówienie dostawa='poczta' faktura='tak'>
+        <towary>
+            <towar>
+                <nazwa>Pendrive SanDisk 16GB</nazwa>
+                <ilość>1</ilość>
+                <cena>32.99</cena>
+            </towar>
+            <towar>
+                <nazwa>Myszka Logitech M171</nazwa>
+                <ilość>1</ilość>
+                <cena>49.99</cena>
+            </towar>
+            <towar>
+                <nazwa>Karta pamięci SanDisk 32GB SDHC</nazwa>
+                <ilość>1</ilość>
+                <cena>99.99</cena>
+            </towar>
+        </towary>
+        <klient>
+            <imie>Tadeusz</imie>
+            <nazwisko>Lewandowski</nazwisko>
+            <adres>
+                <miasto>Warszawa</miasto>
+                <ulica>Gagarina</ulica>
+                <nr_domu>25</nr_domu>
+                <kod>01-005</kod>
+            </adres>
+            <email>tadeusz.l@yahoo.com</email>
+            <telefon>734255614</telefon>
+            <nip>641-76-16-88</nip>
+        </klient>
+        <data>
+            <dzień>27</dzień>
+            <miesiąc>2</miesiąc>
+            <rok>2018</rok>
+        </data>
+        <koszt>182.97</koszt>   
+    </zamówienie>
+    
+    <zamówienie dostawa='kurier' faktura='nie'>
+        <towary>
+            <towar>
+                <nazwa>Telewizor Samsung UE55M5502</nazwa>
+                <ilość>1</ilość>
+                <cena>2399.99</cena>
+            </towar>
+            <towar>
+                <nazwa>Soundbar Denon DHT-S514</nazwa>
+                <ilość>1</ilość>
+                <cena>1749.99</cena>
+            </towar>
+        </towary>
+        <klient>
+            <imie>Mariusz</imie>
+            <nazwisko>Pawelec</nazwisko>
+            <adres>
+                <miasto>Lublin</miasto>
+                <ulica>Narutowicza</ulica>
+                <nr_domu>65</nr_domu>
+                <nr_lokalu>12</nr_lokalu>
+                <kod>20-013</kod>
+            </adres>
+            <email>mariusz.paw@wp.pl</email>
+            <telefon>714366257</telefon>
+        </klient>
+        <data>
+            <dzień>25</dzień>
+            <miesiąc>2</miesiąc>
+            <rok>2018</rok>
+        </data>
+        <koszt>4149.98</koszt>   
+    </zamówienie>
+</zamowienia>
+
