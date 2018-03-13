@@ -360,5 +360,301 @@
         </data>
         <koszt>4149.98</koszt>   
     </zamówienie>
+    <zamówienie dostawa='kurier' faktura='tak'>
+        <towary>
+            <towar>
+                <nazwa>Samsung Galaxy s8</nazwa>
+                <ilość>2</ilość>
+                <cena>2999.99</cena>
+            </towar>
+        </towary>
+        <klient>
+            <imie>Dawid</imie>
+            <nazwisko>Jany</nazwisko>
+            <adres>
+                <miasto>Zdunska Wola</miasto>
+                <ulica>Oronska</ulica>
+                <nr_domu>5</nr_domu>
+                <nr_lokalu>30</nr_lokalu>
+                <kod>97-301</kod>
+            </adres>
+            <email>Dawid1@gmail.com</email>
+            <telefon>631134767</telefon>
+            <nip>725-18-01-998</nip>
+        </klient>
+        <data>
+            <dzień>19</dzień>
+            <miesiąc>3</miesiąc>
+            <rok>2018</rok>
+        </data>
+        <koszt>5999.98</koszt>
+    </zamówienie>
+    <zamówienie dostawa='poczta' faktura='nie'>
+        <towary>
+            <towar>
+                <nazwa>Huawei P20 Lite Niebieski</nazwa>
+                <ilość>1</ilość>
+                <cena>1599.00</cena>
+            </towar>
+            <towar>
+                <nazwa>Acer VX5-591G i7-7700HQ/8GB/1000/Win10 GTX1050</nazwa>
+                <ilość>1</ilość>
+                <cena>3499.00</cena>
+            </towar>
+        </towary>
+        <klient>
+            <imie>Dominik</imie>
+            <nazwisko>Dominiak</nazwisko>
+            <adres>
+                <miasto>Zdunska Wola</miasto>
+                <ulica>Gdanska</ulica>
+                <nr_domu>2</nr_domu>
+                <nr_lokalu>3</nr_lokalu>
+                <kod>97-220</kod>
+            </adres>
+            <email>dominik@gmail.com</email>
+            <telefon>766776453</telefon>
+        </klient>
+        <data>
+            <dzień>19</dzień>
+            <miesiąc>3</miesiąc>
+            <rok>2018</rok>
+        </data>
+        <koszt>5099.98</koszt>   
+    </zamówienie>
+    <zamówienie dostawa='kurier' faktura='nie'>
+        <towary>
+            <towar>
+                <nazwa>SteelSeries Arctis Pro + GameDAC</nazwa>
+                <ilość>1</ilość>
+                <cena>1099.00</cena>
+            </towar>
+        </towary>
+        <klient>
+            <imie>Kamil</imie>
+            <nazwisko>Nowisnki</nazwisko>
+            <adres>
+                <miasto>Sieradz</miasto>
+                <ulica>Jana Pawła</ulica>
+                <nr_domu>12</nr_domu>
+                <nr_lokalu>33</nr_lokalu>
+                <kod>97-230</kod>
+            </adres>
+            <email>NowinskiKamil@onet.pl</email>
+            <telefon>998998725</telefon>
+        </klient>
+        <data>
+            <dzień>19</dzień>
+            <miesiąc>3</miesiąc>
+            <rok>2018</rok>
+        </data>
+        <koszt>1099.00</koszt>   
+    </zamówienie>
+    <zamówienie dostawa='kurier' faktura='nie'>
+        <towary>
+            <towar>
+                <nazwa>AOC I2369VM czarno-srebrny</nazwa>
+                <ilość>1</ilość>
+                <cena>529.00</cena>
+            </towar>
+        </towary>
+        <klient>
+            <imie>Paulina</imie>
+            <nazwisko>Skowronska</nazwisko>
+            <adres>
+                <miasto>Sieradz</miasto>
+                <ulica>Jana Pawła</ulica>
+                <nr_domu>13</nr_domu>
+                <nr_lokalu>33</nr_lokalu>
+                <kod>97-230</kod>
+            </adres>
+            <email>Skowronska@wp.pl</email>
+            <telefon>776565432</telefon>
+        </klient>
+        <data>
+            <dzień>19</dzień>
+            <miesiąc>3</miesiąc>
+            <rok>2018</rok>
+        </data>
+        <koszt>529.00</koszt>   
+    </zamówienie>
+    <zamówienie dostawa='kurier' faktura='nie'>
+        <towary>
+            <towar>
+                <nazwa>ASUS PRIME Z370-P </nazwa>
+                <ilość>1</ilość>
+                <cena>500.00</cena>
+            </towar>
+            <towar>
+                <nazwa>Cat S60 Dual SIM LTE czarny</nazwa>
+                <ilość>1</ilość>
+                <cena>2500.00</cena>
+            </towar>
+            <towar>
+                <nazwa>ASUS RT-AC51U (750Mb/s a/b/g/n/ac, USB 3G/4G)</nazwa>
+                <ilość>1</ilość>
+                <cena>130.00</cena>
+            </towar>          
+        </towary>
+        <klient>
+            <imie>Tomek</imie>
+            <nazwisko>Wolny</nazwisko>
+            <adres>
+                <miasto>Łódź</miasto>
+                <ulica>Zygmunta</ulica>
+                <nr_domu>113</nr_domu>
+                <nr_lokalu>10</nr_lokalu>
+                <kod>360</kod>
+            </adres>
+            <email>TomaszWolny@gmail.com</email>
+            <telefon>878698765</telefon>
+        </klient>
+        <data>
+            <dzień>19</dzień>
+            <miesiąc>3</miesiąc>
+            <rok>2018</rok>
+        </data>
+        <koszt>3130.00</koszt>   
+    </zamówienie>
+    <zamówienie dostawa='kurier' faktura='tak'>
+        <towary>
+            <towar>
+                <nazwa>Samsung UE40KU6400</nazwa>
+                <ilość>1</ilość>
+                <cena>2299.00</cena>
+            </towar>
+        </towary>
+        <klient>
+            <imie>Dawid</imie>
+            <nazwisko>Antczak</nazwisko>
+            <adres>
+                <miasto>Zdunska Wola</miasto>
+                <ulica>Jana Pawła</ulica>
+                <nr_domu>133</nr_domu>
+                <nr_lokalu>24</nr_lokalu>
+                <kod>97-220</kod>
+            </adres>
+            <email>Antek112@onet.pl</email>
+            <telefon>665664534</telefon>
+        </klient>
+        <data>
+            <dzień>19</dzień>
+            <miesiąc>3</miesiąc>
+            <rok>2018</rok>
+        </data>
+        <koszt>2299.00</koszt>   
+    </zamówienie>
+    <zamówienie dostawa='kurier' faktura='tak'>
+        <towary>
+            <towar>
+                <nazwa>MSI GP72MVR i7-7700HQ/16GB/1TB+256SSD/Win10X GTX1060</nazwa>
+                <ilość>1</ilość>
+                <cena>6600.00</cena>
+            </towar>
+        </towary>
+        <klient>
+            <imie>Grazyna</imie>
+            <nazwisko>Zietalak</nazwisko>
+            <adres>
+                <miasto>Zygry</miasto>
+                <ulica>-</ulica>
+                <nr_domu>33</nr_domu>
+                <nr_lokalu>-</nr_lokalu>
+                <kod>93-120</kod>
+            </adres>
+            <email>grazynaZ@wp.pl</email>
+            <telefon>776556465</telefon>
+        </klient>
+        <data>
+            <dzień>19</dzień>
+            <miesiąc>3</miesiąc>
+            <rok>2018</rok>
+        </data>
+        <koszt>6600.00</koszt>   
+    </zamówienie>
+    <zamówienie dostawa='kurier' faktura='tak'>
+        <towary>
+            <towar>
+                <nazwa>Mio MiVue 792 Full HD/2,7"/140/Wi-Fi</nazwa>
+                <ilość>1</ilość>
+                <cena>749.00</cena>
+            </towar>
+        </towary>
+        <klient>
+            <imie>Wiktor</imie>
+            <nazwisko>Janczyk</nazwisko>
+            <adres>
+                <miasto>Łódź</miasto>
+                <ulica>Pabianicka</ulica>
+                <nr_domu>11</nr_domu>
+                <nr_lokalu>21</nr_lokalu>
+                <kod>97-239</kod>
+            </adres>
+            <email>JaNcZyK@gmail.com</email>
+            <telefon>887654635</telefon>
+        </klient>
+        <data>
+            <dzień>17</dzień>
+            <miesiąc>3</miesiąc>
+            <rok>2018</rok>
+        </data>
+        <koszt>749.00</koszt>   
+    </zamówienie>
+    <zamówienie dostawa='poczta' faktura='nie'>
+        <towary>
+            <towar>
+                <nazwa>Symantec Norton Security Standard 1st. (12m.)</nazwa>
+                <ilość>1</ilość>
+                <cena>89.00</cena>
+            </towar>
+        </towary>
+        <klient>
+            <imie>Paulina</imie>
+            <nazwisko>Kikowska</nazwisko>
+            <adres>
+                <miasto>Łódź</miasto>
+                <ulica>Zgierska</ulica>
+                <nr_domu>111</nr_domu>
+                <nr_lokalu>211</nr_lokalu>
+                <kod>97-239</kod>
+            </adres>
+            <email>PaulinaK@wp.pl</email>
+            <telefon>665443442</telefon>
+        </klient>
+        <data>
+            <dzień>15</dzień>
+            <miesiąc>3</miesiąc>
+            <rok>2018</rok>
+        </data>
+        <koszt>89.00</koszt>   
+    </zamówienie>
+    <zamówienie dostawa='poczta' faktura='nie'>
+        <towary>
+            <towar>
+                <nazwa>Xiaomi Mi Bluetooth Speaker (złoty)</nazwa>
+                <ilość>1</ilość>
+                <cena>149.00</cena>
+            </towar>
+        </towary>
+        <klient>
+            <imie>Piotr</imie>
+            <nazwisko>Kolarski</nazwisko>
+            <adres>
+                <miasto>Pabianice</miasto>
+                <ulica>Zgierska</ulica>
+                <nr_domu>44</nr_domu>
+                <nr_lokalu>32</nr_lokalu>
+                <kod>93-139</kod>
+            </adres>
+            <email>PiotKol@onet.pl</email>
+            <telefon>776554635</telefon>
+        </klient>
+        <data>
+            <dzień>15</dzień>
+            <miesiąc>3</miesiąc>
+            <rok>2018</rok>
+        </data>
+        <koszt>149.00</koszt>   
+    </zamówienie>
 </zamowienia>
 
