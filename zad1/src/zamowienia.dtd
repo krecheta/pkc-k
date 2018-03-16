@@ -8,6 +8,7 @@
 
 <!ELEMENT autorzy (autor+)>
 <!ELEMENT autor (imię, nazwisko, album)>
+<!ATTLIST autor id  CDATA #REQUIRED>
 <!ELEMENT imię (#PCDATA)>
 <!ELEMENT nazwisko (#PCDATA)>
 <!ELEMENT album (#PCDATA)>

@@ -1,0 +1,193 @@
+/****************NAGŁÓWEK**************/
+nagłówek{
+    padding:70px;
+    display:block;
+    background-color: #CC66FF ;
+    margin-bottom: 50px;
+}
+
+nagłówek>przedmiot, opis{
+    display: block;
+    margin-bottom: 30px;
+    margin-top: 10px;
+    text-align: center;
+    font-size: 5ex;
+    font-weight:bold;
+}
+
+/****************AUTOR**************/
+
+autor{
+    display: table-cell;
+    font-size: 35px;
+    color: #FF9933;
+    font-style:italic;
+}
+
+autor[id='2']{
+    width: 3% ;
+}
+
+autor[id='1']>*{
+    display:block;
+}
+/****************ZAMOWIENIE**************/
+zamówienie{
+		display:table;
+		width:80%;
+		height:300px;
+		margin-right:10%;
+		margin-left:10%;
+		margin-bottom:60px;
+		font-size:20pt;
+		counter-increment: zamówienie;
+		border:solid 1px;
+		border-spacing:10mm;
+		}
+/*
+zamówienie[dostawa='poczta']{
+    #background-color: yellowgreen;
+}
+
+zamówienie[dostawa='kurier']{
+    #background-color: purple;
+}*/
+
+/****************NAPISY DODANIE**************/
+
+klient:before{
+    content:"Nabywca ";
+    color: #B2B2C4;
+    margin-bottom:10px;
+    display:inline-block;
+    text-decoration: underline;
+    margin-left:67%;
+}
+
+klient>adres>nr_lokalu:before{
+    content: "/";
+    display:inline;
+}
+
+klient>email:before{
+	content: "EMAIL: ";
+display:inline;
+}
+
+klient>nazwisko:before{
+	content: " ";
+display:inline;
+}
+
+klient>telefon:before{
+	content: "Telefon: ";
+display:inline;
+}
+
+klient>nip:before{
+	content: "NIP: ";
+display:inline;
+}
+
+klient>adres>kod:before{
+	content:"Kod: ";
+	display:inline;
+}
+
+/****************KLIENT**************/
+zamówienie>klient{
+    display: table-header-group;
+    width:30%;
+}
+
+klient>imie{
+    display:inline;
+    padding-left:70%;
+}
+	
+klient>adres,email,telefon,nip{
+    display:block;
+    padding-left:70%;
+}
+
+klient>adres>kod{
+	display:block;
+}
+
+klient:after{
+	content:"Zamówienie nr "counter(zamówienie)": ";
+	font-size:5ex;
+	border:solid 1px ;
+	margin-top:80px;
+	padding-left:40%;
+	background-color:#B2B2C4;
+	display:block;}
+
+/****************TOWARY**************/
+towar:before{
+	content: ""counter(towar)". ";
+	display:inline;
+}
+
+towar{
+	counter-increment: towar;
+	display:table-row-group;	
+}
+
+towar>*{
+	display:table-cell;
+}
+
+towar>ilość:after{
+	content:" szt";
+	display:inline;
+}
+
+towar>cena:after{
+	content:" zł";
+	display:inline;
+}
+
+/****************DATA ZAMOWIENIA**************/
+zamówienie>data>dzień:before{
+	content:"Data zamówienia: ";
+	display:inline;
+}
+
+zamówienie>data>dzień:after{
+	content:"-";
+	display:inline;
+}
+
+zamówienie>data>miesiąc:after{
+	content:"-";
+	display:inline;
+}
+
+zamówienie>data{
+	display:block;
+	border:solid 1px;
+	background-color: #B2B2C4;
+	margin-right:70%;
+	text-align:center;
+}
+
+/****************CENA CALKOWITA**************/
+zamówienie>koszt:before{
+	content:"Cena całkowita: ";
+	display:inline;
+}
+
+zamówienie>koszt:after{
+	content:" zł";
+	display:inline;
+}
+
+zamówienie>koszt{
+	display:block;
+	border:solid 1px;
+	background-color: #B2B2C4;
+	margin-left:70%;
+	text-align:center;
+}
+	
