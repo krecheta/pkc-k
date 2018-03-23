@@ -31,32 +31,33 @@ autor[id='2']{
 autor[id='1']>*{
     display:block;
 }
+
 /****************ZAMOWIENIE**************/
 zamówienie{
-		display:table;
+		display:flex;
 		width:80%;
-		height:300px;
 		margin-right:10%;
 		margin-left:10%;
-		margin-bottom:60px;
-		font-size:20pt;
+		margin-bottom:600px;
 		counter-increment: zamówienie;
 		border:solid 1px;
-		border-spacing:10mm;
+		border-spacing:10mm 4mm;
+        flex-flow: column;
 		}
-/*
+
 zamówienie[dostawa='poczta']{
     #background-color: yellowgreen;
 }
 
 zamówienie[dostawa='kurier']{
     #background-color: purple;
-}*/
+}
 
 /****************NAPISY DODANIE**************/
 
 klient:before{
-    content:"Nabywca ";
+    
+	content:"Nabywca ";
     color: #B2B2C4;
     margin-bottom:10px;
     display:inline-block;
@@ -96,8 +97,8 @@ klient>adres>kod:before{
 
 /****************KLIENT**************/
 zamówienie>klient{
-    display: table-header-group;
-    width:30%;
+    display: block;
+
 }
 
 klient>imie{
@@ -116,14 +117,22 @@ klient>adres>kod{
 
 klient:after{
 	content:"Zamówienie nr "counter(zamówienie)": ";
-	font-size:5ex;
+	font-size:20px;
 	border:solid 1px ;
 	margin-top:80px;
-	padding-left:40%;
+	margin-left:10%;
+	margin-right:10%;
+	text-align:center;
 	background-color:#B2B2C4;
 	display:block;}
 
 /****************TOWARY**************/
+towary{
+	:none;
+	display:inline;
+	order:1;
+}
+
 towar:before{
 	content: ""counter(towar)". ";
 	display:inline;
@@ -132,7 +141,8 @@ towar:before{
 towar{
 	counter-increment: towar;
 	display:table-row-group;	
-}
+	
+	}
 
 towar>*{
 	display:table-cell;
@@ -149,28 +159,38 @@ towar>cena:after{
 }
 
 /****************DATA ZAMOWIENIA**************/
+
+zamówienie>data{
+	order:-1;
+	border:solid 1px;
+	margin:3% 0% 0% 3%;
+	font-size:18px;
+	margin-right:60%;
+	text-align:center;
+
+	background-color: #B2B2C4;
+	}
+
+zamówienie>data>*{	
+}
+
+
 zamówienie>data>dzień:before{
 	content:"Data zamówienia: ";
-	display:inline;
+	display:inline-block;
+	
 }
 
 zamówienie>data>dzień:after{
 	content:"-";
-	display:inline;
+	display:inline-block;
 }
 
 zamówienie>data>miesiąc:after{
 	content:"-";
-	display:inline;
+	display:inline-block;
 }
 
-zamówienie>data{
-	display:block;
-	border:solid 1px;
-	background-color: #B2B2C4;
-	margin-right:70%;
-	text-align:center;
-}
 
 /****************CENA CALKOWITA**************/
 zamówienie>koszt:before{
@@ -184,10 +204,14 @@ zamówienie>koszt:after{
 }
 
 zamówienie>koszt{
-	display:block;
+	order:2;	
 	border:solid 1px;
 	background-color: #B2B2C4;
 	margin-left:70%;
+	margin-top:90px;
+	margin-right:1%;
+	margin-bottom:3%;
 	text-align:center;
+	
 }
 	
