@@ -1,17 +1,18 @@
 /****************NAGŁÓWEK**************/
 nagłówek{
-    padding:70px;
+    padding:50px;
     display:block;
-    background-color: #CC66FF ;
+    background-color: #F2CD8E ;
     margin-bottom: 50px;
+	border:solid 1px;
 }
 
 nagłówek>przedmiot, opis{
     display: block;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
     margin-top: 10px;
     text-align: center;
-    font-size: 5ex;
+    font-size: 30px;
     font-weight:bold;
 }
 
@@ -19,50 +20,47 @@ nagłówek>przedmiot, opis{
 
 autor{
     display: table-cell;
-    font-size: 35px;
-    color: #FF9933;
-    font-style:italic;
+    font-size: 30px;
+    font-style: italic;
 }
 
 autor[id='2']{
-    width: 3% ;
+    width: 3%;
 }
 
 autor[id='1']>*{
-    display:block;
+    display: block;
 }
 
 /****************ZAMOWIENIE**************/
 zamówienie{
-		display:flex;
-		width:80%;
-		margin-right:10%;
-		margin-left:10%;
-		margin-bottom:600px;
-		counter-increment: zamówienie;
-		border:solid 1px;
-		border-spacing:10mm 4mm;
-        flex-flow: column;
-		}
+	display:flex;
+	width:80%;
+	margin-right:10%;
+	margin-left:10%;
+	margin-bottom:60px;
+	counter-increment: zamówienie;
+	border:solid 1px;
+	border-spacing:10mm 5mm;
+	flex-flow: column;
+}
 
 zamówienie[dostawa='poczta']{
-    #background-color: yellowgreen;
+    background-color: #BAD1E8;
 }
 
 zamówienie[dostawa='kurier']{
-    #background-color: purple;
+    background-color: #ffff99;
 }
 
-/****************NAPISY DODANIE**************/
+/****************NAPISY DODANE**************/
 
 klient:before{
-    
-	content:"Nabywca ";
-    color: #B2B2C4;
+	content:"Nabywca:";
     margin-bottom:10px;
     display:inline-block;
     text-decoration: underline;
-    margin-left:67%;
+    margin-left:75%;
 }
 
 klient>adres>nr_lokalu:before{
@@ -71,7 +69,7 @@ klient>adres>nr_lokalu:before{
 }
 
 klient>email:before{
-	content: "EMAIL: ";
+	content: "Email: ";
 display:inline;
 }
 
@@ -98,17 +96,16 @@ klient>adres>kod:before{
 /****************KLIENT**************/
 zamówienie>klient{
     display: block;
-
 }
 
 klient>imie{
     display:inline;
-    padding-left:70%;
+    padding-left:75%;
 }
 	
 klient>adres,email,telefon,nip{
     display:block;
-    padding-left:70%;
+    padding-left:75%;
 }
 
 klient>adres>kod{
@@ -119,12 +116,15 @@ klient:after{
 	content:"Zamówienie nr "counter(zamówienie)": ";
 	font-size:20px;
 	border:solid 1px ;
-	margin-top:80px;
-	margin-left:10%;
-	margin-right:10%;
+	margin-top:40px;
+	margin-bottom: 10px;
+	margin-left:15%;
+	margin-right:15%;
+	padding: 5px;
 	text-align:center;
-	background-color:#B2B2C4;
-	display:block;}
+	background-color:#dedede;
+	display:block;
+}
 
 /****************TOWARY**************/
 towary{
@@ -140,9 +140,8 @@ towar:before{
 
 towar{
 	counter-increment: towar;
-	display:table-row-group;	
-	
-	}
+	display:table-row-group;		
+}
 
 towar>*{
 	display:table-cell;
@@ -159,21 +158,19 @@ towar>cena:after{
 }
 
 /****************DATA ZAMOWIENIA**************/
-
 zamówienie>data{
 	order:-1;
 	border:solid 1px;
 	margin:3% 0% 0% 3%;
 	font-size:18px;
-	margin-right:60%;
+	margin-right:70%;
 	text-align:center;
-
-	background-color: #B2B2C4;
-	}
+	background-color: #dedede;
+	padding: 5px;
+}
 
 zamówienie>data>*{	
 }
-
 
 zamówienie>data>dzień:before{
 	content:"Data zamówienia: ";
@@ -182,12 +179,12 @@ zamówienie>data>dzień:before{
 }
 
 zamówienie>data>dzień:after{
-	content:"-";
+	content:" -";
 	display:inline-block;
 }
 
 zamówienie>data>miesiąc:after{
-	content:"-";
+	content:" -";
 	display:inline-block;
 }
 
@@ -206,11 +203,12 @@ zamówienie>koszt:after{
 zamówienie>koszt{
 	order:2;	
 	border:solid 1px;
-	background-color: #B2B2C4;
+	background-color: #dedede;
 	margin-left:70%;
-	margin-top:90px;
-	margin-right:1%;
+	margin-top:30px;
+	margin-right:3%;
 	margin-bottom:3%;
+	padding: 5px;
 	text-align:center;
 	
 }
