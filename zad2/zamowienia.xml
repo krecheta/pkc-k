@@ -1,24 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-
-<zamowienia xmlns="http://www.example.org/test" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://www.example.org/test xmlSchema.xsd ">
-
+<zamowienia xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="xmlSchema.xsd">
 	
-	<nagłówek>
+	<naglowek>
         <przedmiot>Programowanie komunikacji człowiek-komputer</przedmiot>
         <opis>Zad 2. XML plus definicja XMLSchema</opis>
         <autorzy>
-            <autor id='1'>
-                <imię>Kamil</imię>
+            <autor id='ID-1'>
+                <imie>Kamil</imie>
                 <nazwisko>Recheta</nazwisko>
                 <album>205310</album>
             </autor>
-            <autor id='2'>
-                <imię>Dominik</imię>
+            <autor id='ID-2'>
+                <imie>Dominik</imie>
                 <nazwisko>Dominiak</nazwisko>
                 <album>204193</album>
             </autor>
         </autorzy>
-    </nagłówek>	   
+    </naglowek>   
 </zamowienia>

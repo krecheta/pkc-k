@@ -1,12 +1,16 @@
 <?xml version="1.0"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
-		   targetNamespace="http://www.example.org/test" 
-		   elementFormDefault="qualified">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
 
 <xs:element name="zamowienia">
 	<xs:complexType>
 		<xs:sequence>	
-		
+			<xs:element ref="naglowek"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:element>	
+			
+	
 <!-- ####################################### -->
 <xs:annotation> 
 	<xs:documentation> 
@@ -14,25 +18,39 @@
         przedmiot musi się znajodować jedynie wartość zdefiniowana, moze byc takze pusty"
 	</xs:documentation>
 </xs:annotation>
-<xs:element name="przedmiot" type="xs:string" fixed="Programowanie komunikacji człowiek-komputer"/>
-<xs:element name="opis" type="xs:string" fixed="Zad 2. XML plus definicja XMLSchema"/>
+
+<xs:element name="naglowek">
+	<xs:complexType>
+		<xs:sequence>
+
+			<xs:element name="przedmiot" type="xs:string" fixed="Programowanie komunikacji człowiek-komputer"/>
+			<xs:element name="opis" type="xs:string" fixed="Zad 2. XML plus definicja XMLSchema"/>
+			<xs:element ref="autorzy"/>
+		</xs:sequence>    
+	</xs:complexType>	
+</xs:element>
+
+<xs:element name="autorzy">
+	<xs:complexType> <!-- Complex type dopuszcza aby element mogl posiadac dzieci, w porownaniu do simple ktora tego zabrania -->
+		<xs:sequence>
+			<xs:element ref="autor"  minOccurs="2" maxOccurs="2"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:element>
+
+<xs:element name="autor">
+	<xs:complexType>
+		<xs:all> <!-- All dopuszcza dowolną kolejność elementow -->
+			<xs:element name="imie" type="ImieOrazNazwisko"/>
+			<xs:element name="nazwisko" type="ImieOrazNazwisko"/>
+			<xs:element name="album"/>
+		</xs:all>
+	<xs:attribute name ="id" use="required" type="xs:ID"/>
+	</xs:complexType>
+</xs:element>
 
 
-				
-<xs:element name="imie" type="xs:ImieOrazNazwisko"/>
-<xs:element name="nazwisko" type="ImieOrazNazwisko"/>
-
-<!---
-<xs:adnotation> Zdefiniowalismy anonimowy typ prosty, który nie może być użyty dla innego elementu,
-				ponieważ nie zawiera swojej nazwy
-				</xs:adnotation>
--->
-
-<xs:element name="album" type="xs:integer">
-
-</xs:element>	
-
-<!---
+<!---	<xs:attribute name="id" type="xs:ID" use="required"/>
 <xs:adnotation> Definicja regexa dla adresu EMAIL</xs:adnotation>
 <xs:simpleType name="EMAIL">
 	<xs:restriction base="xs:string">
@@ -55,15 +73,13 @@
             <rok>2018</rok>
 
 -->
-		</xs:sequence>    
-	</xs:complexType>	
-</xs:element>
+
 
 <!--############# Definicja typów prostych #############-->
 
 	<xs:simpleType name="ImieOrazNazwisko">
 		<xs:restriction base="xs:string">
-			<xs:length value="100"/>
+			<xs:maxLength value="100"/>
 		</xs:restriction>
 	</xs:simpleType>
 	
