@@ -46,11 +46,17 @@
 		<xs:all> <!-- All dopuszcza dowolną kolejność elementow -->
 			<xs:element name="imie" type="ImieOrazNazwisko"/>
 			<xs:element name="nazwisko" type="ImieOrazNazwisko"/>
-			<xs:element name="album"/>
+			<xs:element name="album">
+				<xs:key name="NR_ALBUMU">
+					<xs:selector xpath="./naglowek/autorzy/autor"/>
+					<xs:field xpath="@album"/>
+				</xs:key>
+			</xs:element>
 		</xs:all>
 	<xs:attribute name ="id" use="required" type="xs:ID"/>
 	</xs:complexType>
 </xs:element>
+
 
 <xs:element name="zamowienie">
 	<xs:complexType>
@@ -195,5 +201,16 @@
 	<xs:attribute name="faktura" type="faktura" use="required"/>
 </xs:attributeGroup>
 
-	
+
+<!-- WARTOSCI UNIKALNE
+<xs:unique name="studenci_unique">
+	<xs:selector xpath="studenci/student"/>
+	<xs:field xpath="imie"/>
+	<xs:field xpath="nazwisko"/>
+</xs:unique> -->
+
+
+
+
+
 </xs:schema>
