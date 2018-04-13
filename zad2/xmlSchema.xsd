@@ -60,8 +60,7 @@
 			<xs:element ref="data"/>
 			<xs:element name="koszt" type="xs:float"/>
 		</xs:sequence>
-		<xs:attribute name="dostawa" type="dostawa" use="required"/>
-		<xs:attribute name="faktura" type="faktura" use="required"/>
+		<xs:attributeGroup ref="ATRYBUTY_ZAMOWIENIA"/>
 	</xs:complexType>
 </xs:element>
 
@@ -182,5 +181,12 @@
       <xs:pattern value="[0-9]{2}-[0-9]{3}"/> 
     </xs:restriction> 
 </xs:simpleType>
+
+<!-- grupa atrybutów -->
+<xs:attributeGroup name="ATRYBUTY_ZAMOWIENIA">
+	<xs:attribute name="dostawa" type="dostawa" use="required"/>
+	<xs:attribute name="faktura" type="faktura" use="required"/>
+</xs:attributeGroup>
+
 	
 </xs:schema>
