@@ -5,7 +5,10 @@
 <xs:element name="zamowienia">
 	<xs:complexType>
 		<xs:sequence>	
-			<xs:element ref="naglowek"/>
+			<xs:element ref="naglowek" />
+			<xs:choice>
+				<xs:element ref="zamowienie"/>
+			</xs:choice>
 		</xs:sequence>
 	</xs:complexType>
 </xs:element>	
@@ -23,8 +26,8 @@
 	<xs:complexType>
 		<xs:sequence>
 
-			<xs:element name="przedmiot" type="xs:string" fixed="Programowanie komunikacji człowiek-komputer"/>
-			<xs:element name="opis" type="xs:string" fixed="Zad 2. XML plus definicja XMLSchema"/>
+			<xs:element name="przedmiot" type="xs:token" fixed="Programowanie komunikacji człowiek-komputer"/>
+			<xs:element name="opis" type="xs:token" fixed="Zad 2. XML plus definicja XMLSchema"/>
 			<xs:element ref="autorzy"/>
 		</xs:sequence>    
 	</xs:complexType>	
@@ -49,39 +52,126 @@
 	</xs:complexType>
 </xs:element>
 
+<xs:element name="zamowienie">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element ref="towary"/>
+			<xs:element ref="klient"/>
+			<xs:element ref="data"/>
+			<xs:element name="koszt" type="xs:float"/>
+		</xs:sequence>
+		<xs:attribute name="dostawa" type="dostawa"/>
+		<xs:attribute name="faktura" type="faktura"/>
+	</xs:complexType>
+</xs:element>
 
-<!---	<xs:attribute name="id" type="xs:ID" use="required"/>
-<xs:adnotation> Definicja regexa dla adresu EMAIL</xs:adnotation>
-<xs:simpleType name="EMAIL">
-	<xs:restriction base="xs:string">
-		<xs:pattern value="x+@x+.x+"/>
-	</xs:restriction>
-</xs:simpleType>
-		
+<xs:element name="towary">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="zamowione_towary"/>
+			</xs:sequence>
+		</xs:complexType>
+</xs:element>
+
+<xs:element name="zamowione_towary">
+		<xs:complexType>
+			<xs:simpleContent>
+				<xs:extension base="xs:string" >
+					<xs:attribute name="list" type="xs:string" />
+				</xs:extension>				
+			</xs:simpleContent>
+		</xs:complexType>
+</xs:element>
+
+<xs:element name="klient">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element name="imie" type="ImieOrazNazwisko"/>
+			<xs:element name="nazwisko" type="ImieOrazNazwisko"/>
+			<xs:element ref="adres"/>
+			<xs:element name="email" type="EMAIL"/>
+			<xs:element name="telefon" type="TELEFON"/>
+			<xs:choice>
+				<xs:element name="nip" type="NIP"/>
+			</xs:choice>
+		</xs:sequence>	
+	</xs:complexType>
+</xs:element >
+
+<xs:element name="adres">
+	<xs:complexType>
+            <xs:sequence>
+		<xs:element name="miasto" type="xs:string"/>
+		<xs:element name="ulica" type="xs:string"/>
+		<xs:element name="nr_domu" type="xs:integer"/>
+		<xs:element name="nr_lokalu" type="xs:integer"/>
+		<xs:element name="kod" type="KOD_POCZTOWY"/>
+            </xs:sequence>
+	</xs:complexType>
+</xs:element >
 
 
-	
-<xs:element name="email" default="BRAK ADRESU EMAIL" />
+<xs:element name="data">
+	<xs:complexType>
+			<xs:sequence>
+		<xs:element name="dzien" type="xs:integer"/>
+		<xs:element name="miesiac" type="xs:integer"/>
+		<xs:element name="rok" type="xs:integer"/>
 
-<xs:element name="dzień" type="xs:
-<xs:element name="koszt" type="xs:float"/>
-
-        <koszt>2999.99</koszt>   
-
-<dzień>10</dzień>
-            <miesiąc>3</miesiąc>
-            <rok>2018</rok>
-
--->
-
+			</xs:sequence>
+		</xs:complexType>
+</xs:element>
 
 <!--############# Definicja typów prostych #############-->
 
-	<xs:simpleType name="ImieOrazNazwisko">
-		<xs:restriction base="xs:string">
-			<xs:maxLength value="100"/>
-		</xs:restriction>
-	</xs:simpleType>
+<xs:simpleType name="ImieOrazNazwisko">
+	<xs:restriction base="xs:string">
+		<xs:maxLength value="30"/>
+	</xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="pusty">
+	<xs:restriction base="xs:string">
+		<xs:maxLength value="0"/>
+	</xs:restriction>
+</xs:simpleType>
 	
+<xs:simpleType name="dostawa">
+  <xs:restriction base="xs:string">
+    <xs:enumeration value="kurier" />
+    <xs:enumeration value="poczta" />
+  </xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="faktura">
+  <xs:restriction base="xs:string">
+    <xs:enumeration value="tak" />
+    <xs:enumeration value="nie" />
+  </xs:restriction>
+</xs:simpleType>
+
+ <xs:simpleType name="EMAIL"> 
+    <xs:restriction base="xs:string"> 
+      <xs:pattern value="[^@]+@[^\.]+\..+"/> 
+    </xs:restriction> 
+  </xs:simpleType> 
+  
+<xs:simpleType name="TELEFON">
+ <xs:restriction base="xs:string"> 
+      <xs:pattern value="[0-9]{9}"/> 
+    </xs:restriction> 
+</xs:simpleType>
+ 
+<xs:simpleType name="NIP">
+ <xs:restriction base="xs:string"> 
+      <xs:pattern value="[0-9]{3}(-[0-9]{2}){2}-[0-9]{3}"/> 
+    </xs:restriction> 
+</xs:simpleType>
+
+<xs:simpleType name="KOD_POCZTOWY">
+ <xs:restriction base="xs:string"> 
+      <xs:pattern value="[0-9]{2}-[0-9]{3}"/> 
+    </xs:restriction> 
+</xs:simpleType>
 	
 </xs:schema>

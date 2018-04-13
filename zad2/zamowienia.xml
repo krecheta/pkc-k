@@ -18,5 +18,32 @@
                 <album>204193</album>
             </autor>
         </autorzy>
-    </naglowek>   
+    </naglowek>
+      
+    <zamowienie dostawa='kurier' faktura='tak'>
+        <towary>
+            <zamowione_towary list="e030 e031"/>
+        </towary>
+        <klient>
+            <imie>Jan</imie>
+            <nazwisko>Kowalski</nazwisko>
+            <adres>
+                <miasto>Piotrków Trybunalski</miasto>
+                <ulica>Wronia</ulica>
+                <nr_domu>50</nr_domu>
+                <nr_lokalu>3</nr_lokalu>
+                <kod>97-300</kod>
+            </adres>
+            <email>jan.kowalski@gmail.com</email>
+            <telefon>614234767</telefon>
+            <nip>725-18-01-126</nip>
+        </klient>
+        <data>
+            <dzien>10</dzien>
+            <miesiac>3</miesiac>
+            <rok>2018</rok>
+        </data>
+        <koszt>2999.99</koszt>   
+    </zamowienie>    
+    
 </zamowienia>
