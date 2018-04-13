@@ -377,7 +377,7 @@
             <miesiac>3</miesiac>
             <rok>2018</rok>
         </data>
-        <koszt>3130.00</koszt>   
+        <koszt>3130.10</koszt>   
     </zamowienie>
     <zamowienie dostawa='kurier' faktura='tak'>
         <towary>
