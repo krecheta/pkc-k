@@ -10,12 +10,12 @@
             <autor id='ID-1'>
                 <imie>Kamil</imie>
                 <nazwisko>Recheta</nazwisko>
-                <album>205310</album>
+                <album nr="205310"/>
             </autor>
             <autor id='ID-2'>
                 <imie>Dominik</imie>
                 <nazwisko>Dominiak</nazwisko>
-                <album>204193</album>
+                <album nr="204193"/>
             </autor>
         </autorzy>
     </naglowek>
@@ -478,7 +478,7 @@
     <zamowienie dostawa='poczta' faktura='nie'>
         <towary>
             
-            <zamowione_towary list="e006 e008"/>
+            <zamowione_towary list="e033"/>
         </towary>
         <klient>
             <imie>Piotr</imie>

@@ -10,7 +10,24 @@
 				<xs:element ref="towar" minOccurs="10" maxOccurs="unbounded"/>
 		</xs:sequence>
 	</xs:complexType>
-</xs:element>	
+	
+	<xs:unique name="NR_ALBUMU">
+		<xs:selector xpath="naglowek/autorzy/autor/album"/>
+		<xs:field xpath="@nr"/>	
+	</xs:unique>
+	
+	
+		<!-- <xs:key name="NR_ALBUMU">
+					<xs:selector xpath="./zamowienie/towary/zamowione_towary"/>
+					<xs:field xpath="@list"/>
+				</xs:key>
+				
+						<xs:keyref name="NR_towaru" refer="NR_ALBUMU">
+					<xs:selector xpath="./towar"/>
+					<xs:field xpath="@id"/>
+				</xs:keyref>
+				-->
+</xs:element>
 			
 	
 <!-- ####################################### -->
@@ -47,10 +64,9 @@
 			<xs:element name="imie" type="ImieOrazNazwisko"/>
 			<xs:element name="nazwisko" type="ImieOrazNazwisko"/>
 			<xs:element name="album">
-				<xs:key name="NR_ALBUMU">
-					<xs:selector xpath="./naglowek/autorzy/autor"/>
-					<xs:field xpath="@album"/>
-				</xs:key>
+				<xs:complexType>
+					<xs:attribute name="nr" />
+				</xs:complexType>
 			</xs:element>
 		</xs:all>
 	<xs:attribute name ="id" use="required" type="xs:ID"/>
