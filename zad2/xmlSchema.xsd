@@ -131,7 +131,7 @@
 	<xs:complexType>
 		<xs:sequence>
 			<xs:element name="dzien" type="DZIEN"/>
-			<xs:element name="miesiac" type="MIESI¥C"/>
+			<xs:element name="miesiac" type="MIESIAC"/>
 			<xs:element name="rok" type="ROK"/>
 		</xs:sequence>
 	</xs:complexType>
@@ -212,7 +212,7 @@
     </xs:restriction>
 </xs:simpleType>
 
-<xs:simpleType name="MIESI¥C">
+<xs:simpleType name="MIESIAC">
     <xs:restriction base="xs:integer">
       <xs:minInclusive value="1"/>
       <xs:maxInclusive value="12"/>
