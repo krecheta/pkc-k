@@ -98,7 +98,7 @@
 		<xs:complexType>
 			<xs:simpleContent>
 				<xs:extension base="xs:string" >
-					<xs:attribute name="list" type="xs:string" use="required" />
+					<xs:attribute name="list" type="DOSTEPNE_OBIEKTY" use="required" />
 				</xs:extension>				
 			</xs:simpleContent>
 		</xs:complexType>
@@ -207,6 +207,12 @@
 <xs:simpleType name="KOSZT">
 	<xs:restriction base="xs:decimal">
  <xs:fractionDigits value="2" />
+	</xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="DOSTEPNE_OBIEKTY">
+	<xs:restriction base="xs:string">
+ <xs:pattern value="((e0[0-3][0-9])\s)+" />
 	</xs:restriction>
 </xs:simpleType>
 
