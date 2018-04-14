@@ -2,17 +2,18 @@
 
 <zamowienia xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:noNamespaceSchemaLocation="xmlSchema.xsd">
-	
+	<Uczelnia nazwa="Politechnika Łódzka"/>
+
 	<naglowek>
         <przedmiot>Programowanie komunikacji człowiek-komputer</przedmiot>
         <opis>Zad 2. XML plus definicja XMLSchema</opis>
         <autorzy>
-            <autor id='ID-1'>
+            <autor id='ID-1' glowna_uczelnia='Politechnika Łódzka'>
                 <imie>Kamil</imie>
                 <nazwisko>Recheta</nazwisko>
                 <album nr="205310"/>
             </autor>
-            <autor id='ID-2'>
+        <autor id='ID-2' glowna_uczelnia='Politechnika Łódzka'>
                 <imie>Dominik</imie>
                 <nazwisko>Dominiak</nazwisko>
                 <album nr="204193"/>

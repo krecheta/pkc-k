@@ -5,27 +5,36 @@
 <xs:element name="zamowienia">
 	<xs:complexType>
 		<xs:sequence>	
+			<xs:element name="Uczelnia">
+			<xs:complexType>
+				<xs:attribute name="nazwa"/>
+			</xs:complexType>
+			</xs:element>			
 			<xs:element ref="naglowek" />
 				<xs:element ref="zamowienie" minOccurs="0" maxOccurs="unbounded"/>
 				<xs:element ref="towar" minOccurs="10" maxOccurs="unbounded"/>
 		</xs:sequence>
 	</xs:complexType>
-	
+
 	<xs:unique name="NR_ALBUMU">
 		<xs:selector xpath="naglowek/autorzy/autor/album"/>
 		<xs:field xpath="@nr"/>	
 	</xs:unique>
 	
-	
+	<xs:keyref name="DOJAKIEJUCZELNI" refer="NAZWAUCZELNI">
+		<xs:selector xpath="./naglowek/autorzy/autor"/>
+			<xs:field xpath="@glowna_uczelnia"/>
+		</xs:keyref>	
+
+	<xs:key name="NAZWAUCZELNI" >
+		<xs:selector xpath="./Uczelnia"/>
+		<xs:field xpath="@nazwa"/>
+	</xs:key>
 		<!-- <xs:key name="NR_ALBUMU">
 					<xs:selector xpath="./zamowienie/towary/zamowione_towary"/>
 					<xs:field xpath="@list"/>
 				</xs:key>
 				
-						<xs:keyref name="NR_towaru" refer="NR_ALBUMU">
-					<xs:selector xpath="./towar"/>
-					<xs:field xpath="@id"/>
-				</xs:keyref>
 				-->
 </xs:element>
 			
@@ -41,7 +50,6 @@
 <xs:element name="naglowek">
 	<xs:complexType>
 		<xs:sequence>
-
 			<xs:element name="przedmiot" type="xs:token" fixed="Programowanie komunikacji człowiek-komputer"/>
 			<xs:element name="opis" type="xs:token" fixed="Zad 2. XML plus definicja XMLSchema"/>
 			<xs:element ref="autorzy"/>
@@ -70,9 +78,9 @@
 			</xs:element>
 		</xs:all>
 	<xs:attribute name ="id" use="required" type="xs:ID"/>
+	<xs:attribute name="glowna_uczelnia" use="required"/>
 	</xs:complexType>
 </xs:element>
-
 
 <xs:element name="zamowienie">
 	<xs:complexType>
@@ -150,7 +158,6 @@
 		<xs:attribute name="id" type="xs:string"/>
 	</xs:complexType>
 </xs:element>
-	
 
 <!--############# Definicja typów prostych #############-->
 
@@ -216,23 +223,10 @@
 	</xs:restriction>
 </xs:simpleType>
 
-
 <!-- grupa atrybutów -->
 <xs:attributeGroup name="ATRYBUTY_ZAMOWIENIA">
 	<xs:attribute name="dostawa" type="dostawa" use="required"/>
 	<xs:attribute name="faktura" type="faktura" use="required"/>
 </xs:attributeGroup>
-
-
-<!-- WARTOSCI UNIKALNE
-<xs:unique name="studenci_unique">
-	<xs:selector xpath="studenci/student"/>
-	<xs:field xpath="imie"/>
-	<xs:field xpath="nazwisko"/>
-</xs:unique> -->
-
-
-
-
 
 </xs:schema>
