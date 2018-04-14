@@ -1,0 +1,576 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet href="./plany.css" type="text/css"?>
+<!DOCTYPE plany SYSTEM "plany.dtd" [
+	<!-- <![IGNORE[
+		informacje dtd można także pobierać z zewnętrznego pliku w
+		poniższy sposób (potweirdzone przez xmlllint), ale przeglądarki
+		(chrome, firefox) sobie z tym nie radzą.
+		<!ENTITY % zewnętrzne_dtd SYSTEM "plany.dtd">
+		%zewnętrzne_dtd;
+	]]> -->
+	<!-- UPDATE: z <![IGNORE[ ...]]> też przeglądarki sobie nie radzą -->
+	<!ENTITY L "LODEX">
+] >
+<plany>
+	<nagłówek>
+		<uczelnia>Politechnika Łódzka</uczelnia>
+		<wydział>FTIMS</wydział>
+		<miejscowość>Łódź</miejscowość>
+		<data dzień="27" miesiąc="X" rok="2010"/>
+		<autorzy>
+			<autor>
+				<imię>Sebastian</imię>
+				<nazwisko>Drabiński</nazwisko>
+				<album>150856</album>
+				<kierunek>informatyka</kierunek>
+				<specjalność>Technologie Gier i Symulacji Komputerowych</specjalność>
+				<rok>III</rok>
+			</autor>
+			<autor>
+				<imię>Paweł</imię>
+				<nazwisko>Tarasiuk</nazwisko>
+				<album>151021</album>
+				<kierunek>informatyka</kierunek>
+				<specjalność ips="tak">Inżynieria Oprogramowania i Analiza Danych</specjalność>
+				<rok>III</rok>
+			</autor>
+		</autorzy>
+	</nagłówek>
+	<lista_prowadzących>
+		<definicja_prowadzącego stopień="prof. dr hab." imię="Piotr" nazwisko="Szczepaniak" identyfikator="PS0" />
+		<definicja_prowadzącego stopień="dr hab." imię="Artur" nazwisko="Bartoszewicz" identyfikator="AB0" />
+		<definicja_prowadzącego stopień="dr" imię="Artur" nazwisko="Wachowicz" identyfikator="AW0" />
+		<definicja_prowadzącego stopień="prof." imię="Jerzy" nazwisko="Stanecki" identyfikator="JS0" />
+		<definicja_prowadzącego stopień="dr inż." imię="Aneta" nazwisko="Poniszewska-Marańda" identyfikator="APM0" />
+		<definicja_prowadzącego stopień="mgr" imię="Marcin" nazwisko="Rudź" identyfikator="MR0" />
+		<definicja_prowadzącego stopień="dr inż." imię="Joanna" nazwisko="Ochelska-Mierzejewska" identyfikator="JOM0" />
+		<definicja_prowadzącego stopień="mgr inż." imię="Anna" nazwisko="Służewska" identyfikator="AS0" />
+		<definicja_prowadzącego stopień="mgr inż." imię="Michał" nazwisko="Pryczek" identyfikator="MP0" />
+		<definicja_prowadzącego stopień="dr inż." imię="Bartłomiej" nazwisko="Stasiak" identyfikator="BS0" />
+		<definicja_prowadzącego stopień="mgr inż." imię="Arkadiusz" nazwisko="Tomczyk" identyfikator="AT0" />
+		<definicja_prowadzącego stopień="dr inż." imię="Henryk" nazwisko="Dębiński" identyfikator="HD0" />
+		<definicja_prowadzącego imię="Grzegorz" nazwisko="Graczyk" identyfikator="GG0" />
+		<definicja_prowadzącego stopień="mgr" imię="Jolanta" nazwisko="Banasiak-Gaca" identyfikator="JBG0" />
+		<definicja_prowadzącego stopień="dr inż." imię="Agnieszka" nazwisko="Wosiak" identyfikator="AgW0" />
+		<definicja_prowadzącego stopień="dr inż." imię="Antoni" nazwisko="Zajączkowski" identyfikator="AZ0" />
+		<definicja_prowadzącego stopień="dr inż." imię="Adam" nazwisko="Wojciechowski" identyfikator="AdW0" />
+		<definicja_prowadzącego stopień="dr inż." imię="Krzysztof" nazwisko="Myszkorowski" identyfikator="KM0" />
+		<definicja_prowadzącego stopień="mgr" imię="Izabela" nazwisko="Świerad" identyfikator="IŚ0" />
+		<definicja_prowadzącego stopień="mgr" imię="Aneta" nazwisko="Ławska" identyfikator="AŁ0" />
+	</lista_prowadzących>
+	<plan>
+		<student>
+			<imię>Paweł</imię>
+			<nazwisko>Tarasiuk</nazwisko>
+		</student>
+		<dzień nazwa="poniedziałek">
+			<zajęcia blok="1" rodzaj="wykład">
+				<przedmiot>Analiza danych</przedmiot>
+				<czas>
+					<start>8:15</start>
+					<koniec>10:00</koniec>
+				</czas>
+				<miejsce>
+					<sala>F3</sala>
+					<budynek>&L;</budynek>
+				</miejsce>
+				<prowadzący kto="PS0">
+					<stopień>prof. dr hab.</stopień>
+					<imię>Piotr</imię>
+					<nazwisko>Szczepaniak</nazwisko>
+				</prowadzący>
+			</zajęcia>
+			<zajęcia blok="1" rodzaj="wykład">
+				<przedmiot>Algebra liniowa</przedmiot>
+				<czas>
+					<start>8:15</start>
+					<przerwa>
+						<start>9:00</start>
+						<koniec>9:15</koniec>
+					</przerwa>
+					<koniec>10:00</koniec>
+				</czas>
+				<miejsce>
+					<sala>F10</sala>
+					<budynek>&L;</budynek>
+				</miejsce>
+				<prowadzący kto="AB0">
+					<stopień>dr hab.</stopień>
+					<imię>Artur</imię>
+					<nazwisko>Bartoszewicz</nazwisko>
+				</prowadzący>
+			</zajęcia>
+			<zajęcia blok="2" rodzaj="ćwiczenia">
+				<przedmiot>Algebra liniowa</przedmiot>
+				<czas>
+					<start>10:15</start>
+					<przerwa>
+						<start>11:00</start>
+						<koniec>12:15</koniec>
+					</przerwa>
+					<koniec>12:00</koniec>
+				</czas>
+				<miejsce>
+					<sala>F5</sala>
+					<budynek>&L;</budynek>
+				</miejsce>
+				<prowadzący kto="AW0">
+					<stopień>dr</stopień>
+					<imię>Artur</imię>
+					<nazwisko>Wachowicz</nazwisko>
+				</prowadzący>
+			</zajęcia>
+			<zajęcia blok="4" rodzaj="wykład">
+				<przedmiot>Wybrane zagadnienia historii sztuki i estetyki</przedmiot>
+				<czas>
+					<start>14:15</start>
+					<koniec>16:00</koniec>
+				</czas>
+				<miejsce>
+					<sala>F10</sala>
+					<budynek>&L;</budynek>
+				</miejsce>
+				<prowadzący kto="JS0">
+					<stopień>prof.</stopień>
+					<imię>Jerzy</imię>
+					<nazwisko>Stanecki</nazwisko>
+				</prowadzący>
+			</zajęcia>
+		</dzień>
+		<dzień nazwa="wtorek">
+			<zajęcia blok="2" rodzaj="wykład">
+				<przedmiot>Inżynieria oprogramowania</przedmiot>
+				<czas>
+					<start>10:15</start>
+					<koniec>12:00</koniec>
+				</czas>
+				<miejsce>
+					<sala>F10</sala>
+					<budynek>&L;</budynek>
+				</miejsce>
+				<prowadzący kto="APM0">
+					<stopień>dr inż.</stopień>
+					<imię>Aneta</imię>
+					<nazwisko>Poniszewska-Marańda</nazwisko>
+				</prowadzący>
+			</zajęcia>
+			<zajęcia blok="3" rodzaj="ćwiczenia">
+				<przedmiot>Wstęp do logiki i teorii mnogości</przedmiot>
+				<czas>
+					<start>12:30</start>
+					<koniec>14:00</koniec>
+				</czas>
+				<miejsce>
+					<sala>s. 25</sala>
+					<budynek>SZSK</budynek>
+				</miejsce>
+				<prowadzący kto="MR0">
+					<stopień>mgr</stopień>
+					<imię>Marcin</imię>
+					<nazwisko>Rudź</nazwisko>
+				</prowadzący>
+			</zajęcia>
+		</dzień>
+		<dzień nazwa="środa">
+			<zajęcia blok="3" rodzaj="laboratorium">
+				<przedmiot>Programowanie komunikacji człowiek-komputer</przedmiot>
+				<czas>
+					<start>12:15</start>
+					<koniec>13:45</koniec>
+				</czas>
+				<miejsce>
+					<sala>435</sala>
+					<budynek>&L;</budynek>
+				</miejsce>
+				<prowadzący kto="JOM0">
+					<stopień>dr inż.</stopień>
+					<imię>Joanna</imię>
+					<nazwisko>Ochelska-Mierzejewska</nazwisko>
+				</prowadzący>
+				<prowadzący kto="AS0">
+					<stopień>mgr inż.</stopień>
+					<imię>Anna</imię>
+					<nazwisko>Służewska</nazwisko>
+				</prowadzący>
+			</zajęcia>
+			<zajęcia blok="4" rodzaj="laboratorium">
+				<przedmiot>Wybrane zagadnienia algorytmiki i programowania I</przedmiot>
+				<czas>
+					<start>14:00</start>
+					<koniec>16:15</koniec>
+				</czas>
+				<miejsce>
+					<sala>441</sala>
+					<budynek>&L;</budynek>
+				</miejsce>
+				<prowadzący kto="MP0">
+					<stopień>mgr inż.</stopień>
+					<imię>Michał</imię>
+					<nazwisko>Pryczek</nazwisko>
+				</prowadzący>
+				<prowadzący kto="BS0">
+					<stopień>dr inż.</stopień>
+					<imię>Bartłomiej</imię>
+					<nazwisko>Stasiak</nazwisko>
+				</prowadzący>
+				<prowadzący kto="AT0">
+					<stopień>mgr inż.</stopień>
+					<imię>Arkadiusz</imię>
+					<nazwisko>Tomczyk</nazwisko>
+				</prowadzący>
+			</zajęcia>
+			<zajęcia blok="4" rodzaj="wykład">
+				<przedmiot>Wstęp do logiki i teorii mnogości</przedmiot>
+				<czas>
+					<start>14:15</start>
+					<przerwa>
+						<start>15:00</start>
+						<koniec>15:15</koniec>
+					</przerwa>
+					<koniec>16:00</koniec>
+				</czas>
+				<miejsce>
+					<sala>F10</sala>
+					<budynek>&L;</budynek>
+				</miejsce>
+				<prowadzący kto="HD0">
+					<stopień>dr inż.</stopień>
+					<imię>Henryk</imię>
+					<nazwisko>Dębiński</nazwisko>
+				</prowadzący>
+			</zajęcia>
+		</dzień>
+		<dzień nazwa="czwartek">
+			<zajęcia blok="1" rodzaj="laboratorium">
+				<przedmiot>Inżynieria oprogramowania</przedmiot>
+				<czas>
+					<start>8:30</start>
+					<koniec>10:00</koniec>
+				</czas>
+				<miejsce>
+					<sala>441</sala>
+					<budynek>&L;</budynek>
+				</miejsce>
+				<prowadzący kto="APM0">
+					<stopień>dr inż.</stopień>
+					<imię>Aneta</imię>
+					<nazwisko>Poniszewska-Marańda</nazwisko>
+				</prowadzący>
+				<prowadzący kto="AT0">
+					<stopień>mgr inż.</stopień>
+					<imię>Arkadiusz</imię>
+					<nazwisko>Tomczyk</nazwisko>
+				</prowadzący>
+			</zajęcia>
+			<zajęcia blok="2" rodzaj="wykład">
+				<przedmiot>Programowanie komunikacji człowiek-komputer</przedmiot>
+				<czas>
+					<start>10:15</start>
+					<koniec>12:00</koniec>
+				</czas>
+				<miejsce>
+					<sala>F10</sala>
+					<budynek>&L;</budynek>
+				</miejsce>
+				<prowadzący kto="JOM0">
+					<stopień>dr inż.</stopień>
+					<imię>Joanna</imię>
+					<nazwisko>Ochelska-Mierzejewska</nazwisko>
+				</prowadzący>
+			</zajęcia>
+		</dzień>
+		<dzień nazwa="piątek">
+			<zajęcia blok="1" rodzaj="dodatkowe">
+				<przedmiot>Spotkanie sekcji algorytmicznej KINa</przedmiot>
+				<czas>
+					<start>8:30</start>
+					<koniec>10:15</koniec>
+				</czas>
+				<miejsce>
+					<sala>349</sala>
+					<budynek>&L;</budynek>
+				</miejsce>
+				<prowadzący kto="GG0">
+					<imię>Grzegorz</imię>
+					<nazwisko>Graczyk</nazwisko>
+				</prowadzący>
+			</zajęcia>
+			<zajęcia blok="3" rodzaj="ćwiczenia">
+				<przedmiot>Język rosyjski</przedmiot>
+				<czas>
+					<start>12:15</start>
+					<koniec>13:45</koniec>
+				</czas>
+				<miejsce>
+					<sala>s. 17</sala>
+					<budynek>SJO</budynek>
+				</miejsce>
+				<prowadzący kto="JBG0">
+					<stopień>mgr</stopień>
+					<imię>Jolanta</imię>
+					<nazwisko>Banasiak-Gaca</nazwisko>
+				</prowadzący>
+			</zajęcia>
+		</dzień>
+	</plan>
+	
+	<plan>
+		<student>
+			<imię>Sebastian</imię>
+			<nazwisko>Drabiński</nazwisko>
+		</student>
+		<dzień nazwa="poniedziałek">
+			<zajęcia blok="2" rodzaj="laboratorium">
+				<przedmiot>Inżynieria oprogramowania</przedmiot>
+				<czas>
+					<start>10:15</start>
+					<koniec>11:45</koniec>
+				</czas>
+				<miejsce>
+					<sala>445</sala>
+					<budynek>&L;</budynek>
+				</miejsce>
+				<prowadzący kto="APM0">
+					<stopień>dr inż.</stopień>
+					<imię>Aneta</imię>
+					<nazwisko>Poniszewska-Marańda</nazwisko>
+				</prowadzący>
+			</zajęcia>
+			<zajęcia blok="3" rodzaj="laboratorium">
+				<przedmiot>Zaawansowane systemy baz danych</przedmiot>
+				<czas>
+					<start>12:00</start>
+					<koniec>13:30</koniec>
+				</czas>
+				<miejsce>
+					<sala>441</sala>
+					<budynek>&L;</budynek>
+				</miejsce>
+				<prowadzący kto="AgW0">
+					<stopień>dr inż.</stopień>
+					<imię>Agnieszka</imię>
+					<nazwisko>Wosiak</nazwisko>
+				</prowadzący>
+			</zajęcia>			
+			<zajęcia blok="4" rodzaj="wykład">
+				<przedmiot>Wybrane zagadnienia historii sztuki i estetyki</przedmiot>
+				<czas>
+					<start>14:15</start>
+					<koniec>16:00</koniec>
+				</czas>
+				<miejsce>
+					<sala>F10</sala>
+					<budynek>&L;</budynek>
+				</miejsce>
+				<prowadzący kto="JS0">
+					<stopień>prof.</stopień>
+					<imię>Jerzy</imię>
+					<nazwisko>Stanecki</nazwisko>
+				</prowadzący>
+			</zajęcia>
+			<zajęcia blok="5" rodzaj="wykład">
+				<przedmiot>Sygnały i układy dynamiczne</przedmiot>
+				<czas>
+					<start>16:15</start>
+					<koniec>18:00</koniec>
+				</czas>
+				<miejsce>
+					<sala>F7</sala>
+					<budynek>&L;</budynek>
+				</miejsce>
+				<prowadzący kto="AZ0">
+					<stopień>dr inż.</stopień>
+					<imię>Antoni</imię>
+					<nazwisko>Zajączkowski</nazwisko>
+				</prowadzący>
+			</zajęcia>
+			<zajęcia blok="6" rodzaj="laboratorium">
+				<przedmiot>Sygnały i układy dynamiczne</przedmiot>
+				<czas>
+					<start>18:15</start>
+					<koniec>19:45</koniec>
+				</czas>
+				<miejsce>
+					<sala>s. 18</sala>
+					<budynek>SZSK</budynek>
+				</miejsce>
+				<prowadzący kto="AZ0">
+					<stopień>dr inż.</stopień>
+					<imię>Antoni</imię>
+					<nazwisko>Zajączkowski</nazwisko>
+				</prowadzący>
+			</zajęcia>
+		</dzień>
+		<dzień nazwa="wtorek">
+			<zajęcia blok="2" rodzaj="wykład">
+				<przedmiot>Inżynieria oprogramowania</przedmiot>
+				<czas>
+					<start>10:15</start>
+					<koniec>12:00</koniec>
+				</czas>
+				<miejsce>
+					<sala>F10</sala>
+					<budynek>&L;</budynek>
+				</miejsce>
+				<prowadzący kto="APM0">
+					<stopień>dr inż.</stopień>
+					<imię>Aneta</imię>
+					<nazwisko>Poniszewska-Marańda</nazwisko>
+				</prowadzący>
+			</zajęcia>
+			<zajęcia blok="3" rodzaj="laboratorium">
+				<przedmiot>Programowanie aplikacji graficznych</przedmiot>
+				<czas>
+					<start>13:00</start>
+					<koniec>14:30</koniec>
+				</czas>
+				<miejsce>
+					<sala>445</sala>
+					<budynek>&L;</budynek>
+				</miejsce>
+				<prowadzący kto="AdW0">
+					<stopień>dr inż.</stopień>
+					<imię>Adam</imię>
+					<nazwisko>Wojciechowski</nazwisko>
+				</prowadzący>
+			</zajęcia>
+			<zajęcia blok="5" rodzaj="wykład">
+				<przedmiot>Zaawansowane systemy baz danych</przedmiot>
+				<czas>
+					<start>16:15</start>
+					<koniec>18:00</koniec>
+				</czas>
+				<miejsce>
+					<sala>F2</sala>
+					<budynek>&L;</budynek>
+				</miejsce>
+				<prowadzący kto="KM0">
+					<stopień>dr inż.</stopień>
+					<imię>Krzysztof</imię>
+					<nazwisko>Myszkorowski</nazwisko>
+				</prowadzący>
+			</zajęcia>
+		</dzień>
+		<dzień nazwa="środa">
+			<zajęcia blok="1" rodzaj="wykład">
+				<przedmiot>Programowanie aplikacji graficznych</przedmiot>
+				<czas>
+					<start>08:30</start>
+					<koniec>10:00</koniec>
+				</czas>
+				<miejsce>
+					<sala>F2</sala>
+					<budynek>&L;</budynek>
+				</miejsce>
+				<prowadzący kto="AdW0">
+					<stopień>dr inż.</stopień>
+					<imię>Adam</imię>
+					<nazwisko>Wojciechowski</nazwisko>
+				</prowadzący>
+			</zajęcia>
+			<zajęcia blok="2" rodzaj="ćwiczenia">
+				<przedmiot>Język angielski (techniczny)</przedmiot>
+				<czas>
+					<start>10:15</start>
+					<koniec>11:45</koniec>
+				</czas>
+				<miejsce>
+					<sala>s. 10</sala>
+					<budynek>SJO</budynek>
+				</miejsce>
+				<prowadzący kto="IŚ0">
+					<stopień>mgr</stopień>
+					<imię>Izabela</imię>
+					<nazwisko>Świerad</nazwisko>
+				</prowadzący>
+			</zajęcia>
+			<zajęcia blok="3" rodzaj="laboratorium">
+				<przedmiot>Programowanie komunikacji człowiek-komputer</przedmiot>
+				<czas>
+					<start>12:15</start>
+					<koniec>13:45</koniec>
+				</czas>
+				<miejsce>
+					<sala>435</sala>
+					<budynek>&L;</budynek>
+				</miejsce>
+				<prowadzący kto="JOM0">
+					<stopień>dr inż.</stopień>
+					<imię>Joanna</imię>
+					<nazwisko>Ochelska-Mierzejewska</nazwisko>
+				</prowadzący>
+				<prowadzący kto="AS0">
+					<stopień>mgr inż.</stopień>
+					<imię>Anna</imię>
+					<nazwisko>Służewska</nazwisko>
+				</prowadzący>
+			</zajęcia>
+		</dzień>
+		<dzień nazwa="czwartek">
+			<zajęcia blok="1" rodzaj="ćwiczenia">
+				<przedmiot>Wychowanie fizyczne (tenis ziemny)</przedmiot>
+				<czas>
+					<start>08:15</start>
+					<koniec>09:45</koniec>
+				</czas>
+				<miejsce>
+					<budynek>MKT</budynek>
+				</miejsce>
+				<prowadzący kto="AŁ0">
+					<stopień>mgr</stopień>
+					<imię>Aneta</imię>
+					<nazwisko>Ławska</nazwisko>
+				</prowadzący>
+			</zajęcia>
+			<zajęcia blok="2" rodzaj="wykład">
+				<przedmiot>Programowanie komunikacji człowiek-komputer</przedmiot>
+				<czas>
+					<start>10:15</start>
+					<koniec>12:00</koniec>
+				</czas>
+				<miejsce>
+					<sala>F10</sala>
+					<budynek>&L;</budynek>
+				</miejsce>
+				<prowadzący kto="JOM0">
+					<stopień>dr inż.</stopień>
+					<imię>Joanna</imię>
+					<nazwisko>Ochelska-Mierzejewska</nazwisko>
+				</prowadzący>
+			</zajęcia>
+			<zajęcia blok="4" rodzaj="laboratorium">
+				<przedmiot>Podstawy gier komputerowych</przedmiot>
+				<czas>
+					<start>14:30</start>
+					<koniec>16:00</koniec>
+				</czas>
+				<miejsce>
+					<sala>445</sala>
+					<budynek>&L;</budynek>
+				</miejsce>
+				<prowadzący kto="AdW0">
+					<stopień>dr inż.</stopień>
+					<imię>Adam</imię>
+					<nazwisko>Wojciechowski</nazwisko>
+				</prowadzący>
+			</zajęcia>
+			<zajęcia blok="5" rodzaj="wykład">
+				<przedmiot>Podstawy gier komputerowych</przedmiot>
+				<czas>
+					<start>16:30</start>
+					<koniec>18:00</koniec>
+				</czas>
+				<miejsce>
+					<sala>F2</sala>
+					<budynek>&L;</budynek>
+				</miejsce>
+				<prowadzący kto="AdW0">
+					<stopień>dr inż.</stopień>
+					<imię>Adam</imię>
+					<nazwisko>Wojciechowski</nazwisko>
+				</prowadzący>
+			</zajęcia>
+		</dzień>
+		<dzień nazwa="piątek"></dzień>
+	</plan>
+</plany>

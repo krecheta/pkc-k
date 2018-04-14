@@ -1,0 +1,350 @@
+plany {
+	margin: 0px;
+	padding: 4ex 3em 4ex 3em;
+	background-color: #fff;
+	color: #000;
+	font-size: 10pt;
+	font-family: "DejaVu Sans", sans-serif;
+}
+nagłówek {
+	display: block;
+	font-size: 150%;
+	font-family: "DejaVu Serif", serif;
+}
+nagłówek > * {
+	display: block;
+}
+nagłówek > uczelnia {
+	text-decoration: underline;
+}
+nagłówek > wydział:before {
+	content: "Wydział: ";
+	font-weight: normal;
+}
+nagłówek > wydział {
+	font-weight: bold;
+}
+nagłówek > miejscowość, nagłówek > data {
+	display: inline;
+	font-style: italic;
+}
+nagłówek > miejscowość:after {
+	content: ", ";
+}
+nagłówek > data:before {
+	content: "dnia ";
+}
+nagłówek > data:after {
+	content: attr(dzień) " " attr(miesiąc) " " attr(rok);
+}
+nagłówek > autorzy:before {
+	content: "Autorzy pracy: ";
+	display: block;
+	margin-top: 1ex;
+	margin-bottom: 1ex;
+}
+nagłówek > autorzy {
+	margin-left: 1em;
+}
+nagłówek autor {
+	display: list-item;
+	list-style-position: inside;
+	margin-bottom: 3ex;
+}
+nagłówek autor > nazwisko:after {
+	content: ", ";
+	font-size: 80%;
+}
+nagłówek autor > album:before {
+	content: "nr albumu: ";
+}
+nagłówek autor > album {
+	font-size: 80%;
+}
+nagłówek autor > kierunek, nagłówek autor > specjalność, nagłówek autor > rok {
+	display: list-item;
+	margin-left: 2em;
+	list-style-type: none;
+}
+nagłówek autor > kierunek:before, specjalność:before, rok:before {
+	display: inline-block;
+	width: 8em;
+	font-style: italic;
+}
+nagłówek autor > kierunek:before {
+	content: "Kierunek: ";
+}
+nagłówek autor > specjalność:before {
+	content: "Specjalizacja: ";
+}
+nagłówek autor > rok:before {
+	content: "Rok studiów: ";
+}
+lista_prowadzących {
+	display: none;
+}
+plan {
+	display: block;
+	margin-bottom: 10ex;
+	border: solid #000 1px;
+	border-radius: 2ex;
+	-moz-border-radius: 2ex;
+	-webkit-border-radius: 2ex;
+	padding: 1px;
+	min-width: 190ex;
+	background-color: #dff;
+	color: #000;
+	counter-increment: plan;
+}
+plan:last-child {
+	margin-bottom: 0px;
+}
+student:before {
+	content: "(" counter(plan) ") - Plan lekcji dla: ";
+	font-weight: normal;
+}
+student {
+	display: block;
+	margin: 1px;
+	border: solid #000 1px;
+	border-radius: 2ex;
+	-moz-border-radius: 2ex;
+	-webkit-border-radius: 2ex;
+	text-align: center;
+	background-color: #000;
+	color: #fff;
+	font-weight: bold;
+}
+student nazwisko {
+	text-transform: uppercase;
+}
+dzień:before {
+	content: attr(nazwa);
+	display: block;
+	margin-bottom: 4px;
+	border-top: dashed #000 2px;
+	border-bottom: dashed #000 1px;
+	padding: 1px 0px;
+	width: 100%;
+	height: 2.5ex;
+	text-align: center;
+	background-color: #9ff;
+	color: #000;
+	font-weight: bold;
+	text-transform: capitalize;
+}
+dzień {
+	display: block;
+	margin: 2px 0px 4px 0px;
+	border-bottom: dashed #000 1px;
+	padding-bottom: 5px;
+	background-color: #bff;
+	color: #000;
+}
+dzień > zajęcia {
+	background-color: #dff;
+	color: #000;
+}
+dzień:nth-child(2n):before {
+	background-color: #dfb;
+	color: #000;
+}
+dzień:nth-child(2n) {
+	background-color: #dfd;
+	color: #000;
+}
+dzień:nth-child(2n) > zajęcia {
+	background-color: #efe;
+	color: #000;
+}
+dzień:last-child {
+	border-radius: 3ex;
+	-moz-border-radius: 3ex;
+	-webkit-border-radius: 3ex;
+}
+dzień:empty:before {
+	display: none;
+}
+dzień:empty {
+	visibility: hidden;
+}
+dzień:not(:last-child):empty {
+	display: none;
+}
+zajęcia:before {
+	display: inline-block;
+	float: left;
+	padding: 2px;
+}
+zajęcia[rodzaj="wykład"]:before {
+	content: url("ikony/x-office-presentation.png");
+}
+zajęcia[rodzaj="ćwiczenia"]:before {
+	content:url("ikony/accesories-text-editor.png");
+}
+zajęcia[rodzaj="laboratorium"]:before {
+	content:url("ikony/computer.png");
+}
+zajęcia[rodzaj="dodatkowe"]:before {
+	content:url("ikony/weather-clear.png");
+}
+zajęcia {
+	display: block;
+	margin-bottom: -15.5ex;
+	outline: solid #000 1px;
+	width: 15%;
+	height: 15.5ex;
+	overflow: hidden;
+}
+zajęcia > przedmiot {
+	display: block;
+	clear: left;
+	float: left;
+	margin-top: -28px;
+	margin-right: 4em;
+	margin-left: 28px;
+	font-size: 80%;
+	font-weight: bold;
+}
+zajęcia > przedmiot:first-line {
+	font-size: 125%;
+}
+zajęcia > czas {
+	float: right;
+	margin-top: -28px;
+	margin-right: 1px;
+	margin-left: -4em;
+	font-size: 70%;
+	font-family: "DejaVu Sans Mono", monospace;
+} 
+zajęcia start {
+	float: right;
+}
+zajęcia koniec {
+	clear: right;
+	float: right;
+}
+zajęcia przerwa {
+	display: none;
+}
+zajęcia > miejsce {
+	clear: right;
+	float: right;
+	margin-right: 1px;
+	font-size: 70%;
+}
+zajęcia > miejsce > * {
+	float: right;
+}
+zajęcia > miejsce > sala:before {
+	content: ", ";
+	margin-right: .5em;
+}
+zajęcia > prowadzący {
+	clear: both;
+	float: left;
+	margin-left: 3px;
+	font-size: 80%;
+}
+zajęcia > prowadzący > stopień {
+	font-style: italic;
+}
+zajęcia:last-child {
+	margin-bottom: 0px;
+}
+zajęcia[blok="1"] {
+	margin-left: 1.43%;
+}
+zajęcia[blok="2"] {
+	margin-left: 17.86%;
+}
+zajęcia[blok="3"] {
+	margin-left: 34.29%;
+}
+zajęcia[blok="4"] {
+	margin-left: 50.71%;
+}
+zajęcia[blok="5"] {
+	margin-left: 67.14%;
+}
+zajęcia[blok="6"] {
+	margin-left: 83.57%;
+}
+zajęcia[blok="1"] ~ zajęcia[blok="1"] {
+	margin-top: 16.5ex;
+	margin-bottom: -15.5ex;
+}
+zajęcia[blok="1"] ~ zajęcia[blok="1"] + zajęcia {
+	margin-top: -32ex;
+}
+zajęcia[blok="1"] ~ zajęcia[blok="1"] ~ zajęcia:last-child {
+	margin-bottom: 16.5ex;
+}
+zajęcia[blok="1"] ~ zajęcia[blok="1"]:last-child {
+	margin-bottom: 0px;
+}
+zajęcia[blok="2"] ~ zajęcia[blok="2"] {
+	margin-top: 16.5ex;
+	margin-bottom: -15.5ex;
+}
+zajęcia[blok="2"] ~ zajęcia[blok="2"] + zajęcia {
+	margin-top: -32ex;
+}
+zajęcia[blok="2"] ~ zajęcia[blok="2"] ~ zajęcia:last-child {
+	margin-bottom: 16.5ex;
+}
+zajęcia[blok="2"] ~ zajęcia[blok="2"]:last-child {
+	margin-bottom: 0px;
+}
+zajęcia[blok="3"] ~ zajęcia[blok="3"] {
+	margin-top: 16.5ex;
+	margin-bottom: -15.5ex;
+}
+zajęcia[blok="3"] ~ zajęcia[blok="3"] + zajęcia {
+	margin-top: -32ex;
+}
+zajęcia[blok="3"] ~ zajęcia[blok="3"] ~ zajęcia:last-child {
+	margin-bottom: 16.5ex;
+}
+zajęcia[blok="3"] ~ zajęcia[blok="3"]:last-child {
+	margin-bottom: 0px;
+}
+zajęcia[blok="4"] ~ zajęcia[blok="4"] {
+	margin-top: 16.5ex;
+	margin-bottom: -15.5ex;
+}
+zajęcia[blok="4"] ~ zajęcia[blok="4"] + zajęcia {
+	margin-top: -32ex;
+}
+zajęcia[blok="4"] ~ zajęcia[blok="4"] ~ zajęcia:last-child {
+	margin-bottom: 16.5ex;
+}
+zajęcia[blok="4"] ~ zajęcia[blok="4"]:last-child {
+	margin-bottom: 0px;
+}
+zajęcia[blok="5"] ~ zajęcia[blok="5"] {
+	margin-top: 16.5ex;
+	margin-bottom: -15.5ex;
+}
+zajęcia[blok="5"] ~ zajęcia[blok="5"] + zajęcia {
+	margin-top: -32ex;
+}
+zajęcia[blok="5"] ~ zajęcia[blok="5"] ~ zajęcia:last-child {
+	margin-bottom: 16.5ex;
+}
+zajęcia[blok="5"] ~ zajęcia[blok="5"]:last-child {
+	margin-bottom: 0px;
+}
+zajęcia[blok="5"] ~ zajęcia[blok="5"] {
+	margin-top: 16.5ex;
+	margin-bottom: -15.5ex;
+}
+zajęcia[blok="6"] ~ zajęcia[blok="6"] + zajęcia {
+	margin-top: -32ex;
+}
+zajęcia[blok="6"] ~ zajęcia[blok="6"] ~ zajęcia:last-child {
+	margin-bottom: 16.5ex;
+}
+zajęcia[blok="6"] ~ zajęcia[blok="6"]:last-child {
+	margin-bottom: 0px;
+}

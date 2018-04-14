@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!ENTITY % dzień_tygodnia "(poniedziałek|wtorek|środa|czwartek|piątek|sobota|niedziela)">
+<!ENTITY % rodzaj_zajęć "(wykład|ćwiczenia|laboratorium|dodatkowe)">
+<!ELEMENT plany (nagłówek, lista_prowadzących, plan*)>
+<!ELEMENT nagłówek (uczelnia, wydział, miejscowość, data, autorzy)>
+<!ELEMENT uczelnia (#PCDATA)>
+<!ELEMENT wydział (#PCDATA)>
+<!ELEMENT miejscowość (#PCDATA)>
+<!ELEMENT data EMPTY>
+<!ATTLIST data
+		dzień (1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19|20|21|22|23|24|25|26|27|28|29|30|31) #REQUIRED
+		miesiąc (I|II|III|IV|V|VI|VII|VIII|IX|X|XI|XII) #REQUIRED
+		rok (2010|2011|2012) #REQUIRED> <!-- w 2012 będzie koniec świata, albo trzeba będzie uaktualnić DTD -->
+<!ELEMENT autorzy (autor+)>
+<!ELEMENT autor (imię, nazwisko, album, kierunek, specjalność, rok)>
+<!ELEMENT imię (#PCDATA)>
+<!ELEMENT nazwisko (#PCDATA)>
+<!ELEMENT album (#PCDATA)>
+<!ELEMENT kierunek (#PCDATA)>
+<!ELEMENT specjalność (#PCDATA)>
+<!ATTLIST specjalność ips (nie|tak) "nie">
+<!ELEMENT rok (#PCDATA)>
+<!ELEMENT lista_prowadzących (definicja_prowadzącego+)>
+<!ELEMENT definicja_prowadzącego EMPTY>
+<!ATTLIST definicja_prowadzącego
+		stopień NMTOKENS #IMPLIED
+		imię NMTOKEN #REQUIRED
+		nazwisko NMTOKEN #REQUIRED
+		identyfikator ID #REQUIRED>
+<!ELEMENT plan (student,dzień+)>
+<!ELEMENT student (imię, nazwisko)>
+<!ELEMENT dzień (zajęcia*)>
+<!ATTLIST dzień nazwa %dzień_tygodnia; #REQUIRED>
+<!ELEMENT zajęcia (przedmiot, czas, miejsce, prowadzący+)>
+<!ATTLIST zajęcia
+		blok (1|2|3|4|5|6) #REQUIRED
+		rodzaj %rodzaj_zajęć; #REQUIRED>
+<!ELEMENT czas (start, przerwa*, koniec)>
+<!ELEMENT przedmiot (#PCDATA)>
+<!ELEMENT start (#PCDATA)>
+<!ELEMENT przerwa (start, koniec)>
+<!ELEMENT koniec (#PCDATA)>
+<!ELEMENT miejsce (sala?, budynek)>
+<!ELEMENT sala (#PCDATA)>
+<!ELEMENT budynek (#PCDATA)>
+<!ELEMENT prowadzący (stopień?, imię, nazwisko)>
+<!ATTLIST prowadzący kto IDREF #REQUIRED>
+<!ELEMENT stopień (#PCDATA)>
